@@ -5,7 +5,7 @@ type Props = {
 const Container: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <div className="flex w-full">{children}</div>
+      <div className="flex w-full flex-col">{children}</div>
     </>
   );
 };
