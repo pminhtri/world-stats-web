@@ -1,5 +1,9 @@
 {
   "mainTitle": "World Stats",
+  "overview": "Welcome To World Stats!",
+  "content": {
+    "landingPage": "View, learn and explore our beautiful world"
+  },
   "header": {
     "listOption": {
       "Geography": "Geography",

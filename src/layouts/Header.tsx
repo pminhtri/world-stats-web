@@ -3,10 +3,14 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import type { MenuProps } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const { t } = useTranslation();
   const [selectedOption, setSelectedOption] = useState('');
+  const [openDropdown, setOpenDropdown] = useState(false);
+
+  const navigate = useNavigate();
 
   const listOption = [
     { key: 'Geography', value: t('header.listOption.Geography') },
@@ -25,9 +29,17 @@ const Header = () => {
     };
   });
 
+  const handleLogoClick = () => {
+    navigate(0);
+    setSelectedOption('');
+  };
+
   return (
-    <div className="flex w-full items-center shadow-md py-3 px-5">
-      <div className="flex w-1/4 justify-center items-center cursor-pointer">
+    <div className="flex items-center shadow-md py-3 px-5">
+      <div
+        className="flex w-1/4 justify-center items-center cursor-pointer"
+        onClick={handleLogoClick}
+      >
         <Typography.Title style={{ margin: 0 }} level={4}>
           {t('mainTitle')}
         </Typography.Title>
@@ -51,6 +63,10 @@ const Header = () => {
           overlayStyle={{
             width: '200px',
           }}
+          open={openDropdown}
+          onOpenChange={setOpenDropdown}
+          destroyPopupOnHide
+          trigger={['click']}
         >
           <MenuOutlined className="text-2xl cursor-pointer" />
         </Dropdown>

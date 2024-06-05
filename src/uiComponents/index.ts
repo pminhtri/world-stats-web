@@ -1,4 +1,5 @@
 import Container from "./Container";
 import Button from "./Button";
+import Box from "./Box";
 
-export { Container, Button };
+export { Container, Button, Box };
