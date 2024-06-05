@@ -1,0 +1,15 @@
+{
+  "mainTitle": "World Stats",
+  "header": {
+    "listOption": {
+      "Geography": "Geography",
+      "Population": "Population"
+    }
+  },
+  "errorCode": {
+    "notFound": "404"
+  },
+  "pageNotFound": {
+    "description": "Oops! This page could not be found"
+  }
+}
