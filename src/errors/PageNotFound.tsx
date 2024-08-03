@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
-import { Container } from '../uiComponents';
 import { Typography } from 'antd';
+import { Container } from '../layouts';
 
 const PageNotFound = () => {
   const { t } = useTranslation();

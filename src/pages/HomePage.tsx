@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { Footer, Header } from '../layouts';
+import { Container, Footer, Header } from '../layouts';
 import { Card, Typography } from 'antd';
-import { Container } from '../uiComponents';
 import { opacityColors } from '../theme';
 
 const HomePageBody = () => {
